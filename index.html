@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle Pessoal De Finanças</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <h1>Controle Pessoal De Finanças</h1>
+
+    <div id="divEsquerda">
+      <!--Salário-->
+      <div id="divSal">
+        <label id="label1" for="salario">Meu Salário: </label>
+        <input type="number" id="salario" placeholder="Ex: 2000" required />
+        <button id="cadastrarSalario">Cadastrar Salário</button>
+      </div>
+
+      <!--Despesa-->
+      <div id="form">
+        <form id="formulario">
+          <p>
+            Cadastro de Despesa
+            <img
+              src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/1f4b8.png"
+              alt=""
+            />
+          </p>
+
+          <label for="nome">Nome: </label>
+          <input type="text" id="nome" placeholder="Ex: Mercado" required />
+          <br />
+          <label for="data">Data: </label>
+          <input type="date" id="data" placeholder="Digite aqui!" required />
+          <br />
+          <label for="valor">Valor: </label>
+          <input type="number" id="valor" placeholder="Ex: 300" required />
+          <button id="btndespesa" type="submit">Cadastrar Despesa</button>
+        </form>
+      </div>
+    </div>
+    <!--Fim do Formulário-->
+
+    <div id="divResumo">
+      <p id="p2">▶ Minhas Despesas</p>
+
+      <div id="minhasdespesas">
+        <ul id="output"></ul>
+      </div>
+
+      <button id="btnexibir">Exibir Resumo Financeiro</button>
+      <ul id="listaResumo"></ul>
+      <script type="text/javascript" src="js/script.js"></script>
+    </div>
+  </body>
+</html>
