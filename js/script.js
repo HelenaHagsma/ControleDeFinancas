@@ -96,12 +96,19 @@ document.getElementById("btnexibir").addEventListener("click", function(){
     liTD.style.color="#ff0000ff"
     liTD.textContent = "Suas despesas totais são: R$"+ parseFloat(totalDespesas)
 
+    if(saldoFinal<0){
     var liSF = document.createElement("li")
+    liSF.style.color = "#ff7300ff"
+    liSF.textContent = "Seu saldo final é: R$"+saldoFinal
+        } else{
+        var liSF = document.createElement("li")
     liSF.style.color = "#3cff00ff"
     liSF.textContent = "Seu saldo final é: R$"+saldoFinal
+    }
 
     /*adiciona à ul */
     listaResumo.appendChild(liSAL)
     listaResumo.appendChild(liTD)
     listaResumo.appendChild(liSF)
+
 })
