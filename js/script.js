@@ -106,6 +106,8 @@ document.getElementById("btnexibir").addEventListener("click", function(){
     localStorage.removeItem("lista");
     exibirDespesas();
 })
+/*apaga a última despesa da lista*/
+
     document.getElementById("btnapagarcada").addEventListener("click", function(){
         var listaDespesas = JSON.parse(localStorage.getItem(("lista") || []))
         listaDespesas.pop()
