@@ -7,13 +7,12 @@ document.getElementById("cadastrarSalario").addEventListener("click", function (
     var salario = document.getElementById("salario").value; 
     /*Verifica se o campo está vazio*/
     if (salario == "") {
-        alert("Digite um salário!");
+        alert("Digite um salário.");
         return;
     }
     /*Salva o salário no LocalStorage (armazenamento local do navegador)*/
     localStorage.setItem("salario", salario);
-    alert("Salário cadastrado com sucesso!");
-    
+    alert("Salário cadastrado.");
 })
 
 /*----------ADCIONAR DESPESAS---------- */
