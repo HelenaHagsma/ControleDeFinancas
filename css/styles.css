@@ -161,6 +161,7 @@ li:hover{
 #btnapagar:hover{
     font-size: 28px;
     color:rgb(14, 14, 14);
-    background-color: rgba(228, 13, 13, 0.904);
+    background-color: red;
     
 }
+
