@@ -2,10 +2,11 @@
 /*----------CADASTRAR SALÁRIO--------- */
 /*Seleciona o botão "Cadastrar Salário" e adiciona um evento de clique */
 document.getElementById("cadastrarSalario").addEventListener("click", function () {
+   
     /*Pega o valor digitado no input de salário*/
-    var salario = document.getElementById("salario").value;
+    var salario = document.getElementById("salario").value; 
     /*Verifica se o campo está vazio*/
-    if (salario === "") {
+    if (salario == "") {
         alert("Digite um salário!");
         return;
     }
@@ -14,13 +15,6 @@ document.getElementById("cadastrarSalario").addEventListener("click", function (
     alert("Salário cadastrado com sucesso!");
     
 })
-/*Carrega o salário que já foi salvo no LocalStorage (se existir) */
-const salarioSalvo = localStorage.getItem("salario");
-
-/*Se houver um salário salvo, preenche o input com ele*/
-if (salarioSalvo) {
-    document.getElementById("salario").value = salarioSalvo;
-}
 
 /*----------ADCIONAR DESPESAS---------- */
 /*Seleciona o formulário de cadastro de despesas e adiciona um evento ao enviar*/
@@ -44,6 +38,7 @@ document.getElementById("formulario").addEventListener("submit",function(cadastr
 
         document.getElementById("formulario").reset() /*limpa formulário */
         exibirDespesas() /*Chama função para ser exibida na tela */
+
 })
 
 /*------------EXIBIR DESPESAS----------- */
@@ -62,7 +57,7 @@ function exibirDespesas(){
     }
 }
 
-/*------------CRIE E EXIBE RESUMO FINANCEIRO------------ */
+/*------------CRIA E EXIBE RESUMO FINANCEIRO PELO BOTÃO------------ */
 /*Seleciona o botão btnexibir e adiciona evento de clique*/
 document.getElementById("btnexibir").addEventListener("click", function(){
     var listaResumo = document.getElementById("listaResumo")
@@ -70,10 +65,6 @@ document.getElementById("btnexibir").addEventListener("click", function(){
 
     /*Recupera o salário do LocalStorage e converte para número*/
     var salario = parseFloat(localStorage.getItem("salario"))
-    if(!salario){ /*verifica se há salario cadastrado */
-        alert("Cadastre o salário primeiro!")
-        return;
-    }
 
     /*Recupera a lista de despesas*/
     var listaDespesas = JSON.parse(localStorage.getItem("lista"))|| []
@@ -107,14 +98,12 @@ document.getElementById("btnexibir").addEventListener("click", function(){
     }
 
     /*adiciona à ul */
-    listaResumo.appendChild(liSAL)
-    listaResumo.appendChild(liTD)
-    listaResumo.appendChild(liSF)
+    listaResumo.appendChild(liSAL) /*salario */
+    listaResumo.appendChild(liTD) /*total despesas */
+    listaResumo.appendChild(liSF) /*saldo final */
 
+}) /*Botão para apagar todas as despesas */
+    document.getElementById("btnapagar").addEventListener("click", function(){
+    localStorage.removeItem("lista");
+    exibirDespesas();
 })
-document.getElementById("btnapagar").addEventListener("click", function(){
-localStorage.removeItem("lista");
-exibirDespesas();
-
-})
-
