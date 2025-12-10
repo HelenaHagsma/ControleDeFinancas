@@ -111,4 +111,8 @@ document.getElementById("btnexibir").addEventListener("click", function(){
     listaResumo.appendChild(liTD)
     listaResumo.appendChild(liSF)
 
+    document.getElementById("btnapagar").addEventListener("click", function(){
+localStorage.removeItem("lista");
+exibirDespesas();
+
 })
