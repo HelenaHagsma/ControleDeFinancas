@@ -81,7 +81,7 @@ document.getElementById("btnexibir").addEventListener("click", function(){
     var totalDespesas = 0; /*Inicializa variável para somar todas as despesas*/
 
     for (let i = 0; i < listaDespesas.length; i++) { /*soma o valor de todas as despesas */
-    totalDespesas += parseFloat(listaDespesas[i].valor); 
+    totalDespesas = totalDespesas + parseFloat(listaDespesas[i].valor); 
     }
 
     var saldoFinal = salario - totalDespesas /*calcula saldo final */
@@ -111,8 +111,10 @@ document.getElementById("btnexibir").addEventListener("click", function(){
     listaResumo.appendChild(liTD)
     listaResumo.appendChild(liSF)
 
-    document.getElementById("btnapagar").addEventListener("click", function(){
+})
+document.getElementById("btnapagar").addEventListener("click", function(){
 localStorage.removeItem("lista");
 exibirDespesas();
 
 })
+
