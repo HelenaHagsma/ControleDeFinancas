@@ -152,92 +152,15 @@ li:hover{
     background-color: rgba(81, 228, 13, 0.904);
     
 }
-
-@media (max-width: 768px) {
-    #divTotal {
-        display: block; /* transforma as divs em bloco para empilhar verticalmente */
-        padding: 10px;
-    }
-
-    #divEsquerda, #divResumo {
-        float: none !important; /* remove floats do original */
-        margin: 0 auto;          /* centraliza horizontalmente */
-        width: 90% !important;   /* ocupa quase toda a largura */
-    }
-
-    #divSal, #formulario {
-        width: 100% !important;   /* ajusta largura total */
-        height: auto !important;  /* altura automática */
-        margin: 10px 0;
-    }
-
-    #btndespesa, #btnexibir {
-        margin-left: 0 !important; /* remove margens fixas que quebram layout */
-        width: 100%;
-    }
-
-    input, button {
-        width: 100% !important; /* inputs e botões ocupam toda a largura */
-        font-size: 18px;        /* diminui um pouco para caber melhor */
-    }
-
-    label {
-        width: 100%;            /* labels ocupam toda a linha */
-        margin-left: 0 !important;
-        font-size: 20px;
-    }
-
-    img {
-        width: 40px;
-        height: 40px;
-    }
-
-    h1 {
-        font-size: 40px;
-        margin-top: 5dvh;
-    }
-
-    p {
-        font-size: 25px;
-        padding: 1% 0 0 1%;
-    }
-
-    ul, li {
-        font-size: 16px;
-    }
+#btnapagar{
+    margin-left: 2dvh;
+    transition: ease-in-out 0.5s;
+    color:rgb(14, 14, 14);    
+    background-color: red;
 }
-
-/* === TELA MÉDIA: TABLETS === */
-@media (min-width: 769px) and (max-width: 1200px) {
-    #divTotal {
-        display: flex;
-        flex-wrap: wrap; /* permite que a direita desça se não houver espaço */
-        justify-content: space-between;
-    }
-
-    #divEsquerda, #divResumo {
-        width: 48% !important; /* dividem a tela quase ao meio */
-        float: none !important;
-        margin: 10px 0;
-    }
-
-    #divSal, #formulario {
-        width: 100% !important;
-    }
-
-    input, button {
-        width: 100% !important;
-    }
-
-    label {
-        width: 120px !important;
-    }
-
-    h1 {
-        font-size: 50px;
-    }
-
-    p {
-        font-size: 30px;
-    }
+#btnapagar:hover{
+    font-size: 28px;
+    color:rgb(14, 14, 14);
+    background-color: rgba(228, 13, 13, 0.904);
+    
 }
